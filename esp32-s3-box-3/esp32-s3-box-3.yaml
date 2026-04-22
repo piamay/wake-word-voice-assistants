@@ -279,9 +279,9 @@ microphone:
     adc_type: external
 
 speaker:
-  - id: i2s_audio_speaker
-    platform: i2s_audio
-    i2s_audio_id: i2s_audio_bus
+  - platform: i2s_audio
+    id: box_speaker    
+    #i2s_audio_id: i2s_audio_bus - obsolete?
     i2s_dout_pin: GPIO15
     dac_type: external
     sample_rate: 48000
@@ -298,7 +298,7 @@ media_player:
     volume_min: 0.5
     volume_max: 0.8
     announcement_pipeline:
-      speaker: i2s_audio_speaker
+      speaker: box_speaker
       format: FLAC
       sample_rate: 48000
       num_channels: 1  # S3 Box only has one output channel    
